@@ -1,6 +1,6 @@
 [![R checks](https://github.com/seguid/seguid-r/actions/workflows/check-r.yml/badge.svg)](https://github.com/seguid/seguid-r/actions/workflows/check-r.yml)
 [![CLI checks](https://github.com/seguid/seguid-r/actions/workflows/check-cli.yml/badge.svg)](https://github.com/seguid/seguid-r/actions/workflows/check-cli.yml)
-[![Test coverage](https://codecov.io/gh/seguid/seguid-r/branch/develop/graph/badge.svg)](https://app.codecov.io/gh/seguid/seguid-r)
+[![Test coverage](https://codecov.io/gh/seguid/seguid-r/branch/main/graph/badge.svg)](https://app.codecov.io/gh/seguid/seguid-r)
 
 
 # SEGUID v2: Checksums Circular, Linear, Single- and Double-Stranded Sequences
