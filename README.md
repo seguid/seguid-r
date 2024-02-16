@@ -1,4 +1,4 @@
-[![R checks](https://github.com/MetabolicEngineeringGroupCBMA/seguid/actions/workflows/check-r.yml/badge.svg)](https://github.com/MetabolicEngineeringGroupCBMA/seguid/actions/workflows/check-r.yml)
+[![R checks](https://github.com/seguid/seguid-r/actions/workflows/check-r.yml/badge.svg)](https://github.com/seguid/seguid-r/actions/workflows/check-r.yml)
 
 # SEGUID v2: Checksums Circular, Linear, Single- and Double-Stranded Sequences
 
@@ -41,5 +41,5 @@ See `help(package = "seguid")` in R.
 To install the **seguid** R package, use:
 
 ```sh
-$ remotes::install_github("MetabolicEngineeringGroupCBMA/seguid")
+$ remotes::install_github("seguid/seguid-r")
 ```

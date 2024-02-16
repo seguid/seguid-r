@@ -1,5 +1,5 @@
 Package: seguid
-Version: 0.0.0-9051
+Version: 0.0.0-9052
 Title: Sequence Globally Unique Identifier (SEGUID) Checksums for Linear, Circular, Single-Stranded and Double-Stranded Biological Sequences
 Authors@R: c(
     person("Henrik", "Bengtsson",
@@ -11,8 +11,8 @@ Imports:
     base64enc,
     digest
 License: MIT + file LICENSE
-URL: https://www.seguid.org/, https://github.com/MetabolicEngineeringGroupCBMA/seguid/
-BugReports: https://github.com/MetabolicEngineeringGroupCBMA/seguid/issues
+URL: https://www.seguid.org/, https://github.com/seguid/seguid-r/
+BugReports: https://github.com/seguid/seguid-r/issues
 Encoding: UTF-8
 RoxygenNote: 7.3.1
 Roxygen: list(markdown = TRUE)

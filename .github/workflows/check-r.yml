@@ -1,14 +1,6 @@
-on:
-  push:
-    paths:
-      - 'r/**/*'
-      - .github/workflows/check-r.yml
-  pull_request:
-    paths:
-      - 'r/**/*'
-      - .github/workflows/check-r.yml
+on: [push, pull_request]
 
-name: "R checks"
+name: R-CMD-check
 
 jobs:
   R-CMD-check:
@@ -60,7 +52,6 @@ jobs:
 
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
-          working-directory: r
           extra-packages: any::rcmdcheck
           needs: check
 
@@ -76,7 +67,6 @@ jobs:
         if: runner.os != 'Windows'
         run: |
           rcmdcheck::rcmdcheck(
-            path = "r",
             args = "--as-cran",
             error_on = "note",
             check_dir = "check"
@@ -87,7 +77,6 @@ jobs:
         if: runner.os == 'Windows'
         run: |
           rcmdcheck::rcmdcheck(
-            path = "r",
             args = c("--no-manual", "--as-cran"),
             error_on = "note",
             check_dir = "check"
@@ -97,7 +86,6 @@ jobs:
       - name: Check CLI
         if: runner.os != 'Windows'
         run: |
-          cd r
           Rscript -e "install.packages('.', repos = NULL, type = 'source')"
           curl -L -O https://github.com/bats-core/bats-core/archive/refs/tags/v1.10.0.tar.gz && tar xf v1.10.0.tar.gz
           curl -L -O https://github.com/bats-core/bats-support/archive/refs/tags/v0.3.0.tar.gz && tar xf v0.3.0.tar.gz
