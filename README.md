@@ -1,4 +1,5 @@
 [![R checks](https://github.com/seguid/seguid-r/actions/workflows/check-r.yml/badge.svg)](https://github.com/seguid/seguid-r/actions/workflows/check-r.yml)
+[![CLI checks](https://github.com/seguid/seguid-r/actions/workflows/check-cli.yml/badge.svg)](https://github.com/seguid/seguid-r/actions/workflows/check-cli.yml)
 
 # SEGUID v2: Checksums Circular, Linear, Single- and Double-Stranded Sequences
 
