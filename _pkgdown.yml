@@ -1,3 +1,11 @@
+navbar:
+  structure:
+    right: [seguid.org, github]
+  components:
+    seguid.org:
+      icon: fas fa-home
+      href: https://www.seguid.org/
+
 url: ~
 template:
   bootstrap: 5
