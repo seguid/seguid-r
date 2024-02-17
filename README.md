@@ -1,7 +1,8 @@
+<div id="badges" markdown="1"><!-- pkgdown markup -->
 [![R checks](https://github.com/seguid/seguid-r/actions/workflows/check-r.yml/badge.svg)](https://github.com/seguid/seguid-r/actions/workflows/check-r.yml)
 [![CLI checks](https://github.com/seguid/seguid-r/actions/workflows/check-cli.yml/badge.svg)](https://github.com/seguid/seguid-r/actions/workflows/check-cli.yml)
 [![Test coverage](https://codecov.io/gh/seguid/seguid-r/branch/main/graph/badge.svg)](https://app.codecov.io/gh/seguid/seguid-r)
-
+</div>
 
 # SEGUID v2: Checksums Circular, Linear, Single- and Double-Stranded Sequences
 
@@ -46,3 +47,4 @@ To install the **seguid** R package, use:
 ```sh
 $ remotes::install_github("seguid/seguid-r")
 ```
+
