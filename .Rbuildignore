@@ -10,3 +10,6 @@
 ^tests/*.bats$
 ^codecov\.yml$
 ^\.github$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$

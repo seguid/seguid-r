@@ -11,7 +11,7 @@ Imports:
     base64enc,
     digest
 License: MIT + file LICENSE
-URL: https://www.seguid.org/, https://github.com/seguid/seguid-r/
+URL: https://www.seguid.org/, https://github.com/seguid/seguid-r/, https://seguid.github.io/seguid-r/
 BugReports: https://github.com/seguid/seguid-r/issues
 Encoding: UTF-8
 RoxygenNote: 7.3.1
