@@ -4,7 +4,7 @@
 [![Test coverage](https://codecov.io/gh/seguid/seguid-r/branch/main/graph/badge.svg)](https://app.codecov.io/gh/seguid/seguid-r)
 </div>
 
-# SEGUID v2: Checksums Circular, Linear, Single- and Double-Stranded Sequences
+# SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences
 
 This R package, **seguid**, implements SEGUID v2 together with the
 original SEGUID algorithm.
