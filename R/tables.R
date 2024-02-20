@@ -1,27 +1,27 @@
 # Definition of Complementary DNA Symbols
 COMPLEMENT_ALPHABET_DNA <- c(G="C",
-                          A="T",
-                          C="G",
-                          T="A")
+                             A="T",
+                             C="G",
+                             T="A")
 
 
 # Definition of Complementary RNA Symbols
 COMPLEMENT_ALPHABET_RNA <- c(G="C",
-                          A="U",
-                          C="G",
-                          U="A")
+                             A="U",
+                             C="G",
+                             U="A")
 
 
 # Definition of Complementary IUPAC Ambigous DNA Symbols
 COMPLEMENT_ALPHABET_IUPAC <- c(COMPLEMENT_ALPHABET_DNA, c(B="V",
-                                                    D="H",
-                                                    H="D",
-                                                    K="M",
-                                                    M="K",
-                                                    S="S",
-                                                    V="B",
-                                                    W="W",
-                                                    N="N"))
+                                                          D="H",
+                                                          H="D",
+                                                          K="M",
+                                                          M="K",
+                                                          S="S",
+                                                          V="B",
+                                                          W="W",
+                                                          N="N"))
 
 
 ALPHABET_IUPAC_PROTEIN <- c(A="",
@@ -51,8 +51,15 @@ make_alphabet <- function(definition) {
   alphabet <- strsplit(definition, split = ",", fixed = TRUE)[[1]]
   n <- nchar(alphabet)[1]
   stopifnot(nchar(alphabet) == n, n %in% 1:2)
-  
+
   alphabet <- strsplit(alphabet, split = "", fixed = TRUE)
+
+  ## Expand AB -> AB,BA and then drop duplicates
+  if (n == 2L) {
+    alphabet <- c(alphabet, lapply(alphabet, FUN = rev))
+    alphabet <- unique(alphabet)
+  }
+
   keys <- vapply(alphabet, FUN = function(x) x[1], FUN.VALUE = NA_character_)
   assert_valid_alphabet(keys)
   
