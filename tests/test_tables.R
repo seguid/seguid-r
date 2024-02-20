@@ -2,9 +2,16 @@ get_alphabet <- seguid:::get_alphabet
 make_alphabet <- seguid:::make_alphabet
 
 alphabet <- get_alphabet("{DNA}")
+stopifnot(length(alphabet) == 4L)
+
 alphabet <- get_alphabet("{RNA}")
+stopifnot(length(alphabet) == 4L)
+
 alphabet <- get_alphabet("{IUPAC}")
+stopifnot(length(alphabet) == 13L)
+
 alphabet <- get_alphabet("{protein}")
+stopifnot(length(alphabet) == 20L)
 
 ## Unknown alphabet
 res <- tryCatch({
