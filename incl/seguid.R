@@ -31,7 +31,7 @@ cdseguid("GATTACA", "TGTAATC")
 
 ## SEGUID v2 on linear single-stranded expanded
 ## epigenetic sequence (Viner et al., 2024)
-viner_DNA <- "{DNA},m1,1m,h2,2h,f3,3f,c4,4c"
+viner_DNA <- "{DNA},m1,h2,f3,c4"
 lsseguid("AmT2C", alphabet = viner_DNA)
 #> lsseguid=MW4Rh3lGY2mhwteaSKh1-Kn2fGA
 
