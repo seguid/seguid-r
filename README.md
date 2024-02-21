@@ -1,8 +1,8 @@
-<div id="badges" markdown="1"><!-- pkgdown markup -->
+[![seguid status badge](https://seguid.r-universe.dev/badges/seguid)](https://seguid.r-universe.dev/seguid)
 [![R checks](https://github.com/seguid/seguid-r/actions/workflows/check-r.yml/badge.svg)](https://github.com/seguid/seguid-r/actions/workflows/check-r.yml)
 [![CLI checks](https://github.com/seguid/seguid-r/actions/workflows/check-cli.yml/badge.svg)](https://github.com/seguid/seguid-r/actions/workflows/check-cli.yml)
 [![Test coverage](https://codecov.io/gh/seguid/seguid-r/branch/main/graph/badge.svg)](https://app.codecov.io/gh/seguid/seguid-r)
-</div>
+
 
 # SEGUID v2: Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences
 
