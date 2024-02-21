@@ -44,7 +44,6 @@ See `help(package = "seguid")` in R.
 
 To install the **seguid** R package, use:
 
-```sh
-> install.packages("seguid", repos = c("https://seguid.r-universe.dev", "https://cloud.r-project.org"))
+```r
+install.packages("seguid", repos = c("https://seguid.r-universe.dev", "https://cloud.r-project.org"))
 ```
-
