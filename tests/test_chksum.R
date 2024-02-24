@@ -28,28 +28,26 @@ truth <- "csseguid=aAjgnsF9cPI6cu8IQ81sYnstVzU"
 stopifnot(csseguid(m13dna) == truth)
 
 
-truth <- "ldseguid=AWD-dt5-TEua8RbOWfnctJIu9nA"
+truth <- "ldseguid=odgytmQKSOnFEUorGIWK3NDjqUA"
 stopifnot(ldseguid("AT", "AT") == truth)
 
-truth <- "ldseguid=JwB2eUmZkCNjyWAv471JeUbiSDM"
+truth <- "ldseguid=-9xkp3UfucL4bSPxYODh8i9KFEE"
 stopifnot(ldseguid("-AT", "-TA") == truth)
 
-truth <- "ldseguid=XBcVadfQevTW_lklW4rdqw5udQ8"
+truth <- "ldseguid=-9xkp3UfucL4bSPxYODh8i9KFEE"
 stopifnot(ldseguid("-TA", "-AT") == truth)
 
-truth <- "ldseguid=_E05Xeo7KnLxrjsqDdpXNw_AIDE"
+truth <- "ldseguid=ToSxUXWMCIKz-FYdXJ3Qq-bS_8o"
 stopifnot(ldseguid("CTATAG", "--AT--") == truth)
-
-truth <- "ldseguid=np3hncfQvOh8rZ8Co1Ts_02NXg4"
 stopifnot(ldseguid("--AT--", "CTATAG") == truth)
 
-truth <- "cdseguid=tYeHZYwxQGDHTqGDcrebERag0AU"
+truth <- "cdseguid=5fHMG19IbYxn7Yr7_sOCkvaaw7U"
 stopifnot(cdseguid("ACGTT", "AACGT") == truth)
 stopifnot(cdseguid("AACGT", "ACGTT") == truth)
 
 pUC19dna <- readLines("test_data/pUC19.txt", warn = FALSE)
 pUC19dna_rc <- reverse(chartr("ACGT", "TGCA", pUC19dna))
-truth <- "cdseguid=zhw8Yrxfo3FO5DDccx4PamBVPCQ"
+truth <- "cdseguid=mCC0B3UMZfgLyh3Pl574MVjm30U"
 stopifnot(cdseguid(pUC19dna, pUC19dna_rc) == truth)
 bfr <- readLines("test_data/pUC19_minimal_rotation_watson_linebreak_crick.txt", warn = FALSE)
 w <- bfr[1]

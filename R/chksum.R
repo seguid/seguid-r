@@ -220,14 +220,13 @@ ldseguid <- function(watson, crick, alphabet = "{DNA}", form = c("long", "short"
     stop("A sequence must not be empty")
   }
 
-  alphabet2 <- paste0(alphabet, "+[-\n]")
+  alphabet2 <- paste0(alphabet, "+[-;]")
   assert_complementary(watson, crick, alphabet = alphabet2)
 
-  rcrick <- reverse(crick)
-  if (is_seq_less_than(watson, rcrick)) {
-    spec <- paste(watson, rcrick, sep = "\n")
+  if (is_seq_less_than(watson, crick)) {
+    spec <- paste(watson, crick, sep = ";")
   } else {
-    spec <- paste(rcrick, watson, sep = "\n")
+    spec <- paste(crick, watson, sep = ";")
   }
   with_prefix(lsseguid(spec, alphabet = alphabet2), prefix = "ldseguid=", form = form)
 }
