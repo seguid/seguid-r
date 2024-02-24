@@ -77,13 +77,8 @@ cli_call_fcn <- function(..., alphabet = "{DNA}", file = NULL, debug = FALSE, fc
   ## Parse sequence string. This will throw an error if not meeting the minimal specifications
   argnames <- names(formals(fcn))
   if (is.element("crick", argnames)) {
-    nseq <- length(strsplit(seq, split = "\n", fixed = TRUE)[[1]])
-    if (nseq == 1) {
-      stop(sprintf("Specified sequence string contains a single sequence, but expected two: %s", seq))
-    } else {
-      seq_spec <- parse_sequence_string(seq)
-      args2 <- list(watson = seq_spec[["watson"]], crick = seq_spec[["crick"]])
-    }
+    seq_spec <- parse_sequence_string(seq)
+    args2 <- list(watson = seq_spec[["watson"]], crick = seq_spec[["crick"]])
     if (debug) {
       msg <- sprintf("Double-stranded sequence pair:\nwatson=%s\ncrick=%s", sQuote(args2[[1]]), sQuote(args2[[2]]))
     }
