@@ -5,4 +5,4 @@ incl/OVERVIEW.md
 .local
 docs
 tests/test_helper/
-Makefile.seguid-tests
+seguid-tests

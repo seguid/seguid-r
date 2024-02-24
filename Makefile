@@ -62,17 +62,8 @@ win-builder: win-builder-devel win-builder-release
 #---------------------------------------------------------------
 # Check CLI using 'seguid-tests' test suite
 #---------------------------------------------------------------
-check-cli: Makefile.seguid-tests tests/cli.bats
-	make MAKE="$(MAKE) -f Makefile.seguid-tests" -f Makefile.seguid-tests check-cli/seguid-python
+seguid-tests:
+	git clone --depth=1 https://github.com/seguid/seguid-tests.git
 
-Makefile.seguid-tests: 
-	curl -H "Cache-Control: no-cache" -L -o "$@" https://raw.githubusercontent.com/seguid/seguid-tests/main/Makefile
-
-tests/cli.bats:
-	curl -H "Cache-Control: no-cache" -L -o "$@" https://raw.githubusercontent.com/seguid/seguid-tests/main/tests/cli.bats
-
-update-seguid-tests:
-	rm -f Makefile.seguid-tests
-	$(MAKE) Makefile.seguid-tests
-	rm -f tests/cli.bats
-	$(MAKE) tests/cli.bats
+check-cli: seguid-tests
+	cd "$<" && git pull && make check-cli/seguid-r
