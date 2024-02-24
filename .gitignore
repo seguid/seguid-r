@@ -3,7 +3,6 @@ incl/OVERVIEW.md
 .Rdump
 .Rhistory
 .local
-
-
-
 docs
+tests/test_helper/
+Makefile.seguid-tests
