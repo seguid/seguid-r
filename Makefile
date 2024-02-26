@@ -62,10 +62,15 @@ win-builder: win-builder-devel win-builder-release
 #---------------------------------------------------------------
 # Check CLI using 'seguid-tests' test suite
 #---------------------------------------------------------------
-seguid-tests:
-	cd seguid-tests && git pull origin main
+add-submodules:
+	git submodule add https://github.com/seguid/seguid-tests seguid-tests
+
+seguid-tests: .PHONY
 	git submodule init
 	git submodule update
+	cd "$@" && git pull origin main
 
 check-cli: seguid-tests
-	$(MAKE) -C seguid-tests check-cli/seguid-r
+	$(MAKE) -C "$<" check-cli/seguid-r
+
+.PHONY:
