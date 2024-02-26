@@ -5,8 +5,16 @@ Usage:
  Rscript -e seguid::seguid [options] <<< "<sequence>"
 
 Options:  
- --help             Display the full help page with examples
- --version          Output version of this software
+ --help            Display the full help page with examples
+ --version         Output version of this software
+ --alphabet=<SET>  Set of symbols for the input sequence.
+
+Predefined alphabets:
+ "{DNA}"           Complementary DNA symbols (= "AT,CG")
+ "{IUPAC}"         Ambigous DNA (= "{DNA},BV,DH,KM,SS,RY,WW,NN")
+ "{RNA}"           Complementary RNA symbols (= "AU,CG")
+ "{protein}"       Amino-acid symbols (= "A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,
+                   T,V,W,Y")
 
 Examples:
 Rscript -e seguid::seguid --version
