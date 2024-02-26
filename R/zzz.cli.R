@@ -14,8 +14,10 @@ Rscript -e seguid::seguid --help
 
 echo "ACGT" | Rscript -e seguid::lsseguid
 Rscript -e seguid::lsseguid <<< "ACGT"
-Rscript -e seguid::ldseguid <<< $\'-CGT\\nTGCA\'
-Rscript -e seguid::cdseguid <<< $\'ACGT\\nTGCA\'
+Rscript -e seguid::cdseguid <<< $\'ACGT\\nTGCA\' # two-line syntax
+Rscript -e seguid::ldseguid <<< \'ACGT;ACGT\'    # watson-crick syntax
+Rscript -e seguid::ldseguid <<< $\'-CGT\\nTGCA\' # two-line syntax
+Rscript -e seguid::ldseguid <<< \'-CGT;ACGT\'    # watson-crick syntax
 
 Version: {{ version }}
 Copyright: Henrik Bengtsson (2023-2024)
