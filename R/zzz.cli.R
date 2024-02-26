@@ -14,8 +14,8 @@ Rscript -e seguid::seguid --help
 
 echo "ACGT" | Rscript -e seguid::lsseguid
 Rscript -e seguid::lsseguid <<< "ACGT"
-Rscript -e seguid::ldseguid <<< $\'-CGT\nTGCA\'
-Rscript -e seguid::cdseguid <<< $\'ACGT\nTGCA\'
+Rscript -e seguid::ldseguid <<< $\'-CGT\\nTGCA\'
+Rscript -e seguid::cdseguid <<< $\'ACGT\\nTGCA\'
 
 Version: {{ version }}
 Copyright: Henrik Bengtsson (2023-2024)
