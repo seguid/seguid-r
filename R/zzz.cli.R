@@ -26,6 +26,7 @@ Rscript -e seguid::cdseguid <<< $\'ACGT\\nTGCA\' # two-line syntax
 Rscript -e seguid::ldseguid <<< \'ACGT;ACGT\'    # watson-crick syntax
 Rscript -e seguid::ldseguid <<< $\'-CGT\\nTGCA\' # two-line syntax
 Rscript -e seguid::ldseguid <<< \'-CGT;ACGT\'    # watson-crick syntax
+Rscript -e seguid::lsseguid --alphabet="{RNA}" <<< "ACGU"
 
 Version: {{ version }}
 Copyright: Henrik Bengtsson (2023-2024)
