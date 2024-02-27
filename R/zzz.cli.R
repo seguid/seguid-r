@@ -1,8 +1,8 @@
-cli_help_string <- '
+cli_help_string <- "
 {{ package }}: {{ title }}
 
 Usage:
- Rscript -e seguid::seguid [options] <<< "<sequence>"
+ Rscript -e seguid::seguid [options] <<< '<sequence>'
 
 Options:  
  --help            Display the full help page with examples
@@ -10,28 +10,28 @@ Options:
  --alphabet=<SET>  Set of symbols for the input sequence.
 
 Predefined alphabets:
- "{DNA}"           Complementary DNA symbols (= "AT,CG")
- "{IUPAC}"         Ambigous DNA (= "{DNA},BV,DH,KM,SS,RY,WW,NN")
- "{RNA}"           Complementary RNA symbols (= "AU,CG")
- "{protein}"       Amino-acid symbols (= "A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,
-                   T,V,W,Y")
+ '{DNA}'           Complementary DNA symbols (= 'AT,CG')
+ '{IUPAC}'         Ambigous DNA (= '{DNA},BV,DH,KM,SS,RY,WW,NN')
+ '{RNA}'           Complementary RNA symbols (= 'AU,CG')
+ '{protein}'       Amino-acid symbols (= 'A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,
+                   T,V,W,Y')
 
 Examples:
 Rscript -e seguid::seguid --version
 Rscript -e seguid::seguid --help
 
-echo "ACGT" | Rscript -e seguid::lsseguid
-Rscript -e seguid::lsseguid <<< "ACGT"
-Rscript -e seguid::cdseguid <<< $\'ACGT\\nTGCA\' # two-line syntax
-Rscript -e seguid::ldseguid <<< \'ACGT;ACGT\'    # watson-crick syntax
-Rscript -e seguid::ldseguid <<< $\'-CGT\\nTGCA\' # two-line syntax
-Rscript -e seguid::ldseguid <<< \'-CGT;ACGT\'    # watson-crick syntax
-Rscript -e seguid::lsseguid --alphabet="{RNA}" <<< "ACGU"
+echo 'ACGT' | Rscript -e seguid::seguid --type=lsseguid
+Rscript -e seguid::seguid --type=lsseguid <<< 'ACGT'
+Rscript -e seguid::seguid --type=cdseguid <<< $'ACGT\\nTGCA' # two-line syntax
+Rscript -e seguid::seguid --type=ldseguid <<< 'ACGT;ACGT'   # watson-crick syntax
+Rscript -e seguid::seguid --type=ldseguid <<< $'-CGT\\nTGCA' # two-line syntax
+Rscript -e seguid::seguid --type=ldseguid <<< '-CGT;ACGT'   # watson-crick syntax
+Rscript -e seguid::seguid --type=lsseguid --alphabet='{RNA}' <<< 'ACGU'
 
 Version: {{ version }}
 Copyright: Henrik Bengtsson (2023-2024)
 License: MIT
-'
+"
 
 #' @importFrom utils capture.output file_test str
 cli_call_fcn <- function(..., alphabet = "{DNA}", file = NULL, debug = FALSE, fcn) {
@@ -116,24 +116,4 @@ class(seguid) <- c("cli_function", class(seguid))
 attr(seguid, "cli") <- function(..., type = c("seguid", "lsseguid", "csseguid", "ldseguid", "cdseguid")) {
   type <- match.arg(type)
   cli_call_fcn(..., fcn = type)
-}
-
-class(lsseguid) <- c("cli_function", class(lsseguid))
-attr(lsseguid, "cli") <- function(...) {
-  cli_call_fcn(..., fcn = lsseguid)
-}
-
-class(csseguid) <- c("cli_function", class(csseguid))
-attr(csseguid, "cli") <- function(...) {
-  cli_call_fcn(..., fcn = csseguid)
-}
-
-class(ldseguid) <- c("cli_function", class(ldseguid))
-attr(ldseguid, "cli") <- function(...) {
-  cli_call_fcn(..., fcn = ldseguid)
-}
-
-class(cdseguid) <- c("cli_function", class(cdseguid))
-attr(cdseguid, "cli") <- function(...) {
-  cli_call_fcn(..., fcn = cdseguid)
 }
