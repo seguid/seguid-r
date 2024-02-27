@@ -20,7 +20,7 @@ utils::bibentry(
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   # Plain-text citation:
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-  textVersion = paste0(
+  textVersion = paste(
     "Babnigg, György, and Carol S Giometti,",
     "A database of unique protein sequence identifiers for proteome studies.",
     "Proteomics (2006) 6 (16): 4514–22.",
