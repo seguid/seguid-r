@@ -1,12 +1,12 @@
 Package: seguid
-Version: 0.0.0-9069
-Title: Sequence Globally Unique Identifier (SEGUID) Checksums for Linear, Circular, Single-Stranded and Double-Stranded Biological Sequences
+Version: 0.0.0-9071
+Title: Sequence Globally Unique Identifier ('SEGUID') Checksums for Linear, Circular, Single-Stranded and Double-Stranded Biological Sequences
 Authors@R: c(
     person("Henrik", "Bengtsson",
            role=c("aut", "cre", "cph"),
            email = "henrikb@braju.com"
     ))
-Description: An R implementation the original Sequence Globally Unique Identifier (SEGUID) algorithm [Babnigg and Giometti (2006) <doi:10.1002/pmic.200600032>] and SEGUID v2 (<https://www.seguid.org>), which extends SEGUID v1 to support linear, circular, single- and double-stranded biological sequences, e.g. DNA, RNA, and proteins.
+Description: An R implementation the original Sequence Globally Unique Identifier ('SEGUID') algorithm [Babnigg and Giometti (2006) <doi:10.1002/pmic.200600032>] and 'SEGUID' v2 (<https://www.seguid.org>), which extends 'SEGUID' v1 to support linear, circular, single- and double-stranded biological sequences, e.g. DNA, RNA, and proteins.
 Imports:
     base64enc,
     digest
