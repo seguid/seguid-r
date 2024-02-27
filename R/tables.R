@@ -46,17 +46,17 @@ get_alphabet <- function(spec) {
     part <- parts[kk]
     if (grepl("^[{][[:alpha:]][[:alnum:]-]+[}]$", part)) {
       if (part == "{DNA}") {
-        alphabet <- "AT,CG"
+        alphabet <- "CG,AT"
       } else if (part == "{RNA}") {
-        alphabet <- "AU,CG"
+        alphabet <- "CG,AU"
       } else if (part == "{DNA-IUPAC}") {
-        alphabet <- "AT,CG,BV,DH,HD,KM,MK,SS,VB,WW,NN"
+        alphabet <- "CG,AT,WW,SS,MK,RY,BV,DH,VB,NN"
       } else if (part == "{RNA-IUPAC}") {
-        alphabet <- "AU,CG,BV,DH,HD,KM,MK,SS,VB,WW,NN"
+        alphabet <- "CG,AU,WW,SS,MK,RY,BV,DH,VB,NN"
       } else if (part == "{protein}") {
         alphabet <- "A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y"
       } else if (part == "{protein-IUPAC}") {
-        alphabet <- "A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y,B,J,X,Z"
+        alphabet <- "A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y,B,J,Z,X"
       } else {
         stop("Unknown alphabet: ", sQuote(part))
       }
