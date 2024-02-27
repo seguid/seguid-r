@@ -7,7 +7,10 @@ stopifnot(length(alphabet) == 4L)
 alphabet <- get_alphabet("{RNA}")
 stopifnot(length(alphabet) == 4L)
 
-alphabet <- get_alphabet("{IUPAC}")
+alphabet <- get_alphabet("{DNA-IUPAC}")
+stopifnot(length(alphabet) == 13L)
+
+alphabet <- get_alphabet("{RNA-IUPAC}")
 stopifnot(length(alphabet) == 13L)
 
 alphabet <- get_alphabet("{protein}")
@@ -32,7 +35,7 @@ stopifnot(identical(sort(alphabet), sort(truth)))
 alphabet <- make_alphabet("AU,CG")
 stopifnot(identical(sort(alphabet), sort(truth)))
 
-truth <- get_alphabet("{IUPAC}")
+truth <- get_alphabet("{DNA-IUPAC}")
 alphabet <- make_alphabet("AT,BV,CG,DH,GC,HD,KM,MK,NN,SS,TA,VB,WW")
 stopifnot(identical(sort(alphabet), sort(truth)))
 alphabet <- make_alphabet("AT,BV,CG,DH,KM,NN,SS,WW")

@@ -58,7 +58,7 @@ assert_alphabet <- function(alphabet) {
   }
 }
 
-assert_complementary <- function(watson, crick, alphabet = COMPLEMENT_ALPHABET_DNA) {
+assert_complementary <- function(watson, crick, alphabet) {
   alphabet <- get_alphabet(alphabet)
 
   ## Validate 'alphabet':

@@ -1,51 +1,3 @@
-# Definition of Complementary DNA Symbols
-COMPLEMENT_ALPHABET_DNA <- c(G="C",
-                             A="T",
-                             C="G",
-                             T="A")
-
-
-# Definition of Complementary RNA Symbols
-COMPLEMENT_ALPHABET_RNA <- c(G="C",
-                             A="U",
-                             C="G",
-                             U="A")
-
-
-# Definition of Complementary IUPAC Ambigous DNA Symbols
-COMPLEMENT_ALPHABET_IUPAC <- c(COMPLEMENT_ALPHABET_DNA, c(B="V",
-                                                          D="H",
-                                                          H="D",
-                                                          K="M",
-                                                          M="K",
-                                                          S="S",
-                                                          V="B",
-                                                          W="W",
-                                                          N="N"))
-
-
-ALPHABET_IUPAC_PROTEIN <- c(A="",
-                         C="",
-                         D="",
-                         E="",
-                         F="",
-                         G="",
-                         H="",
-                         I="",
-                         K="",
-                         L="",
-                         M="",
-                         N="",
-                         P="",
-                         Q="",
-                         R="",
-                         S="",
-                         T="",
-                         V="",
-                         W="",
-                         Y="")
-
-
 make_alphabet <- function(definition) {
   stopifnot(length(definition) == 1, is.character(definition), !is.na(definition))
   alphabet <- strsplit(definition, split = ",", fixed = TRUE)[[1]]
@@ -92,20 +44,21 @@ get_alphabet <- function(spec) {
   parts <- strsplit(spec, split = ",", fixed = TRUE)[[1]]
   for (kk in seq_along(parts)) {
     part <- parts[kk]
-    if (grepl("^[{][[:alpha:]][[:alnum:]]+[}]$", part)) {
+    if (grepl("^[{][[:alpha:]][[:alnum:]-]+[}]$", part)) {
       if (part == "{DNA}") {
-        alphabet <- COMPLEMENT_ALPHABET_DNA
+        alphabet <- "AT,CG"
       } else if (part == "{RNA}") {
-        alphabet <- COMPLEMENT_ALPHABET_RNA
-      } else if (part == "{IUPAC}") {
-        alphabet <- COMPLEMENT_ALPHABET_IUPAC
+        alphabet <- "AU,CG"
+      } else if (part == "{DNA-IUPAC}") {
+        alphabet <- "AT,CG,BV,DH,HD,KM,MK,SS,VB,WW,NN"
+      } else if (part == "{RNA-IUPAC}") {
+        alphabet <- "AU,CG,BV,DH,HD,KM,MK,SS,VB,WW,NN"
       } else if (part == "{protein}") {
-        alphabet <- ALPHABET_IUPAC_PROTEIN
+        alphabet <- "A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y"
       } else {
         stop("Unknown alphabet: ", sQuote(part))
       }
-      part <- paste(sprintf("%s%s", names(alphabet), alphabet), collapse = ",")
-      parts[kk] <- part
+      parts[kk] <- alphabet
     }
   }
   parts <- paste(parts, collapse = ",")
