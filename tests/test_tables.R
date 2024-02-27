@@ -16,6 +16,9 @@ stopifnot(length(alphabet) == 13L)
 alphabet <- get_alphabet("{protein}")
 stopifnot(length(alphabet) == 20L)
 
+alphabet <- get_alphabet("{protein-IUPAC}")
+stopifnot(length(alphabet) == 24L)
+
 ## Unknown alphabet
 res <- tryCatch({
   alphabet <- get_alphabet("unknown")

@@ -55,6 +55,8 @@ get_alphabet <- function(spec) {
         alphabet <- "AU,CG,BV,DH,HD,KM,MK,SS,VB,WW,NN"
       } else if (part == "{protein}") {
         alphabet <- "A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y"
+      } else if (part == "{protein-IUPAC}") {
+        alphabet <- "A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y,B,J,X,Z"
       } else {
         stop("Unknown alphabet: ", sQuote(part))
       }
