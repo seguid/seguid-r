@@ -72,27 +72,54 @@
 </h1></div>
 <p>This R package, <strong>seguid</strong>, implements SEGUID v2 together with the original SEGUID algorithm.</p>
 <div class="section level2">
-<h2 id="example">Example<a class="anchor" aria-label="anchor" href="#example"></a>
+<h2 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
 </h2>
+<div class="section level3">
+<h3 id="single-stranded-dna">Single-stranded DNA<a class="anchor" aria-label="anchor" href="#single-stranded-dna"></a>
+</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">library</span>(seguid)</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">lsseguid</span>(<span class="st">"AT"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"lsseguid=Ax_RG6hzSrMEEWoCO1IWMGska-4"</span></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a></span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">lsseguid</span>(<span class="st">"AT"</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"lsseguid=Ax_RG6hzSrMEEWoCO1IWMGska-4"</span></span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">csseguid</span>(<span class="st">"AT"</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"csseguid=Ax_RG6hzSrMEEWoCO1IWMGska-4"</span></span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a></span>
-<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">csseguid</span>(<span class="st">"TA"</span>)</span>
-<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"csseguid=Ax_RG6hzSrMEEWoCO1IWMGska-4"</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="do">## Linear single-stranded DNA</span></span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">lsseguid</span>(<span class="st">"TATGCCAA"</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"lsseguid=EevrucUNYjqlsxrTEK8JJxPYllk"</span></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a><span class="do">## Linear single-stranded DNA</span></span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">lsseguid</span>(<span class="st">"AATATGCC"</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"lsseguid=XsJzXMxgv7sbpqIzFH9dgrHUpWw"</span></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a><span class="do">## Circular single-stranded DNA</span></span>
+<span id="cb1-12"><a href="#cb1-12" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">csseguid</span>(<span class="st">"TATGCCAA"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"csseguid=XsJzXMxgv7sbpqIzFH9dgrHUpWw"</span></span>
 <span id="cb1-14"><a href="#cb1-14" tabindex="-1"></a></span>
-<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cdseguid</span>(<span class="st">"AT"</span>, <span class="st">"AT"</span>)</span>
-<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"cdseguid=AWD-dt5-TEua8RbOWfnctJIu9nA"</span></span>
-<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cdseguid</span>(<span class="st">"TA"</span>, <span class="st">"TA"</span>)</span>
-<span id="cb1-19"><a href="#cb1-19" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"cdseguid=AWD-dt5-TEua8RbOWfnctJIu9nA"</span></span></code></pre></div>
+<span id="cb1-15"><a href="#cb1-15" tabindex="-1"></a><span class="do">## Same rotating two basepairs</span></span>
+<span id="cb1-16"><a href="#cb1-16" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">csseguid</span>(<span class="st">"GCCAATAT"</span>)</span>
+<span id="cb1-17"><a href="#cb1-17" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"csseguid=XsJzXMxgv7sbpqIzFH9dgrHUpWw"</span></span></code></pre></div>
+</div>
+<div class="section level3">
+<h3 id="double-stranded-dna">Double-stranded DNA<a class="anchor" aria-label="anchor" href="#double-stranded-dna"></a>
+</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">library</span>(seguid)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="do">## Linear double-stranded DNA</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ldseguid</span>(<span class="st">"AATATGCC"</span>, <span class="st">"GGCATATT"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a><span class="do">## Same swapping Watson and Crick </span></span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">ldseguid</span>(<span class="st">"GGCATATT"</span>, <span class="st">"AATATGCC"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"</span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a><span class="do">## Circular double-stranded DNA</span></span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cdseguid</span>(<span class="st">"TATGCCAA"</span>, <span class="st">"TTGGCATA"</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"</span></span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a><span class="do">## Same swapping Watson and Crick </span></span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cdseguid</span>(<span class="st">"TTGGCATA"</span>, <span class="st">"TATGCCAA"</span>)</span>
+<span id="cb2-17"><a href="#cb2-17" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"</span></span>
+<span id="cb2-18"><a href="#cb2-18" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" tabindex="-1"></a><span class="do">## Same rotating two basepairs (= minimal rotation by Watson)</span></span>
+<span id="cb2-20"><a href="#cb2-20" tabindex="-1"></a><span class="sc">&gt;</span> <span class="fu">cdseguid</span>(<span class="st">"AATATGCC"</span>, <span class="st">"GGCATATT"</span>)</span>
+<span id="cb2-21"><a href="#cb2-21" tabindex="-1"></a>[<span class="dv">1</span>] <span class="st">"cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"</span></span></code></pre></div>
+</div>
 </div>
 <div class="section level2">
 <h2 id="documentation">Documentation<a class="anchor" aria-label="anchor" href="#documentation"></a>
@@ -103,7 +130,7 @@
 <h2 id="installation">Installation<a class="anchor" aria-label="anchor" href="#installation"></a>
 </h2>
 <p>To install the <strong>seguid</strong> R package, use:</p>
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html" class="external-link">install.packages</a></span><span class="op">(</span><span class="st">"seguid"</span>, repos <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"https://seguid.r-universe.dev"</span>, <span class="st">"https://cloud.r-project.org"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 </div>
 </div>
