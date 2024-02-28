@@ -26,7 +26,7 @@ in the alphabet specified by the \code{alphabet} argument.}
 \item{alphabet}{(character string) The type of sequence used.
 If \code{"{DNA}"} (default), then the input is a DNA sequence.
 If \code{"{IUPAC}"}, then the input is a DNA sequence specified with
-IUPAC ambigous DNA symbols (3).
+IUPAC ambiguous DNA symbols (3).
 If \code{"{RNA}"}, then the input is an RNA sequence.
 If \code{"{protein}"}, then the input is an amino-acid sequence.
 A custom alphabet may also be used.
@@ -93,9 +93,9 @@ For the same reason, a Base64 checksum cannot safely be used
 as a file or directory name, because it may have a forward slash.
 
 The checksum returned is always 27-character long. This is because the
-represention always end with a padding character (\code{=}) so that the length
-is a multiple of four character. We relax this requirement, by dropping
-the padding character.
+representation always end with a padding character (\code{=}) so that the
+length is a multiple of four character. We relax this requirement, by
+dropping the padding character.
 }
 
 \examples{

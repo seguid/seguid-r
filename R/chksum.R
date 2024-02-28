@@ -90,7 +90,7 @@ with_prefix <- function(s, prefix, form = c("long", "short", "both")) {
 #' @param alphabet (character string) The type of sequence used.
 #' If `"{DNA}"` (default), then the input is a DNA sequence.
 #' If `"{IUPAC}"`, then the input is a DNA sequence specified with
-#' IUPAC ambigous DNA symbols (3).
+#' IUPAC ambiguous DNA symbols (3).
 #' If `"{RNA}"`, then the input is an RNA sequence.
 #' If `"{protein}"`, then the input is an amino-acid sequence.
 #' A custom alphabet may also be used.
@@ -139,9 +139,9 @@ with_prefix <- function(s, prefix, form = c("long", "short", "both")) {
 #'
 #' The checksum returned is always 27-character long. This is because the
 #" SHA-1 hash (4) is 160-bit long (20 bytes), which result in the encoded
-#' represention always end with a padding character (`=`) so that the length
-#' is a multiple of four character. We relax this requirement, by dropping
-#' the padding character.
+#' representation always end with a padding character (`=`) so that the 
+#' length is a multiple of four character. We relax this requirement, by
+#' dropping the padding character.
 #'
 #' @example incl/seguid.R
 #'
