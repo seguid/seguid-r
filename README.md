@@ -60,17 +60,3 @@ original SEGUID algorithm.
 > cdseguid("AATATGCC", "GGCATATT")
 [1] "cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"
 ```
-
-
-## Documentation
-
-See `help(package = "seguid")` in R.
-
-
-## Installation
-
-To install the **seguid** R package, use:
-
-```r
-install.packages("seguid", repos = c("https://seguid.r-universe.dev", "https://cloud.r-project.org"))
-```
