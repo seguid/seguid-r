@@ -10,7 +10,7 @@
     
     <a class="navbar-brand me-2" href="../index.html">seguid</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0-9074</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.0.0-9075</small>
 
     
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -79,17 +79,19 @@ in the alphabet specified by the <code>alphabet</code> argument.</p></dd>
 <dt>alphabet</dt>
 <dd><p>(character string) The type of sequence used.
 If <code>"{DNA}"</code> (default), then the input is a DNA sequence.
-If <code>"{IUPAC}"</code>, then the input is a DNA sequence specified with
-IUPAC ambiguous DNA symbols (3).
 If <code>"{RNA}"</code>, then the input is an RNA sequence.
 If <code>"{protein}"</code>, then the input is an amino-acid sequence.
+If <code>"{DNA-extended}"</code> or <code>"{RNA-extended}"</code>, then the input is a
+DNA or RNA sequence specified an extended set of symbols, including
+If <code>"{protein-extended}"</code>, then the input is an amino-acid sequence
+with an extended set of symbols, including IUPAC symbols (4).
 A custom alphabet may also be used.
 A non-complementary alphabet is specified as a comma-separated
 set of single symbols, e.g. <code>"X,Y,Z"</code>.
 A complementary alphabet is specified as a comma-separated
-set of paired symbols, e.g. <code>"AT,TA,CG,GC"</code>.
+set of paired symbols, e.g. <code>"AT,CG"</code>.
 It is also possible to extend a pre-defined alphabet, e.g.
-<code>"{DNA},XY,YX"</code>.</p></dd>
+<code>"{DNA},XY"</code>.</p></dd>
 
 
 <dt>form</dt>
@@ -172,8 +174,10 @@ identifiers for proteome studies. Proteomics.
 RFC 4648, <a href="https://doi.org/10.17487/RFC4648" class="external-link">doi:10.17487/RFC4648</a>
 , October 2006,
 <a href="https://www.rfc-editor.org/info/rfc4648" class="external-link">https://www.rfc-editor.org/info/rfc4648</a>.</p></li>
-<li><p>Wikpedia article 'Nucleic acid notation', December 2023.
+<li><p>Wikpedia article 'Nucleic acid notation', February 2024.
 <a href="https://en.wikipedia.org/wiki/Nucleic_acid_notation" class="external-link">https://en.wikipedia.org/wiki/Nucleic_acid_notation</a>.</p></li>
+<li><p>Wikpedia article 'Nucleic acid notation', February 2024,
+<a href="https://en.wikipedia.org/wiki/Amino_acid" class="external-link">https://en.wikipedia.org/wiki/Amino_acid</a>.</p></li>
 <li><p>Wikipedia article 'SHA-1' (Secure Hash Algorithm 1), December 2023.
 <a href="https://en.wikipedia.org/wiki/SHA-1" class="external-link">https://en.wikipedia.org/wiki/SHA-1</a>.</p></li>
 </ol></div>
