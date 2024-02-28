@@ -54,7 +54,7 @@ get_alphabet <- function(spec) {
       } else if (part == "{RNA-extended}") {
         alphabet <- "CG,AU,WW,SS,MK,RY,BV,DH,VB,NN"
       } else if (part == "{protein}") {
-        alphabet <- "A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y"
+        alphabet <- "A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y,O,U"
       } else if (part == "{protein-extended}") {
         alphabet <- "A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y,O,U,B,J,Z,X"
       } else {

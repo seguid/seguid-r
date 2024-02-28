@@ -14,7 +14,7 @@ alphabet <- get_alphabet("{RNA-extended}")
 stopifnot(length(alphabet) == 15L)
 
 alphabet <- get_alphabet("{protein}")
-stopifnot(length(alphabet) == 20L)
+stopifnot(length(alphabet) == 22L)
 
 alphabet <- get_alphabet("{protein-extended}")
 stopifnot(length(alphabet) == 26L)
@@ -35,7 +35,7 @@ alphabet <- make_alphabet("CG,AU")
 stopifnot(identical(sort(alphabet), sort(truth)))
 
 truth <- get_alphabet("{protein}")
-alphabet <- make_alphabet("A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y")
+alphabet <- make_alphabet("A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y,O,U")
 stopifnot(identical(sort(alphabet), sort(truth)))
 
 truth <- get_alphabet("{DNA-extended}")
