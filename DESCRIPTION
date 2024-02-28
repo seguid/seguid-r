@@ -1,5 +1,5 @@
 Package: seguid
-Version: 0.0.0-9073
+Version: 0.0.0-9074
 Title: Sequence Globally Unique Identifier ('SEGUID') Checksums for Linear, Circular, Single-Stranded and Double-Stranded Biological Sequences
 Authors@R: c(
     person("Henrik", "Bengtsson",

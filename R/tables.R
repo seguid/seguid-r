@@ -49,14 +49,14 @@ get_alphabet <- function(spec) {
         alphabet <- "CG,AT"
       } else if (part == "{RNA}") {
         alphabet <- "CG,AU"
-      } else if (part == "{DNA-IUPAC}") {
+      } else if (part == "{DNA-extended}") {
         alphabet <- "CG,AT,WW,SS,MK,RY,BV,DH,VB,NN"
-      } else if (part == "{RNA-IUPAC}") {
+      } else if (part == "{RNA-extended}") {
         alphabet <- "CG,AU,WW,SS,MK,RY,BV,DH,VB,NN"
       } else if (part == "{protein}") {
         alphabet <- "A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y"
-      } else if (part == "{protein-IUPAC}") {
-        alphabet <- "A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y,B,J,Z,X"
+      } else if (part == "{protein-extended}") {
+        alphabet <- "A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,T,V,W,Y,O,U,B,J,Z,X"
       } else {
         stop("Unknown alphabet: ", sQuote(part))
       }
