@@ -10,11 +10,13 @@ Options:
  --alphabet=<SET>  Set of symbols for the input sequence.
 
 Predefined alphabets:
- '{DNA}'           Complementary DNA symbols (= 'AT,CG')
- '{IUPAC}'         Ambigous DNA (= '{DNA},BV,DH,KM,SS,RY,WW,NN')
- '{RNA}'           Complementary RNA symbols (= 'AU,CG')
- '{protein}'       Amino-acid symbols (= 'A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,
-                   T,V,W,Y')
+ '{DNA}'              Complementary DNA symbols (= 'AT,CG')
+ '{DNA-extended}'     Extended DNA (= '{DNA},BV,DH,KM,SS,RY,WW,NN')
+ '{RNA}'              Complementary RNA symbols (= 'AU,CG')
+ '{RNA-extended}'     Extended DNA (= '{RNA},BV,DH,KM,SS,RY,WW,NN')
+ '{protein}'          Amino-acid symbols (= 'A,C,D,E,F,G,H,I,K,L,M,N,P,Q,R,S,
+                      T,V,W,Y')
+ '{protein-extended}' Amino-acid symbols (= '{protein},O,U,B,J,Z,X')
 
 Examples:
 Rscript -e seguid::seguid --version

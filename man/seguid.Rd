@@ -25,17 +25,19 @@ in the alphabet specified by the \code{alphabet} argument.}
 
 \item{alphabet}{(character string) The type of sequence used.
 If \code{"{DNA}"} (default), then the input is a DNA sequence.
-If \code{"{IUPAC}"}, then the input is a DNA sequence specified with
-IUPAC ambiguous DNA symbols (3).
 If \code{"{RNA}"}, then the input is an RNA sequence.
 If \code{"{protein}"}, then the input is an amino-acid sequence.
+If \code{"{DNA-extended}"} or \code{"{RNA-extended}"}, then the input is a
+DNA or RNA sequence specified an extended set of symbols, including
+If \code{"{protein-extended}"}, then the input is an amino-acid sequence
+with an extended set of symbols, including IUPAC symbols (4).
 A custom alphabet may also be used.
 A non-complementary alphabet is specified as a comma-separated
 set of single symbols, e.g. \code{"X,Y,Z"}.
 A complementary alphabet is specified as a comma-separated
-set of paired symbols, e.g. \code{"AT,TA,CG,GC"}.
+set of paired symbols, e.g. \code{"AT,CG"}.
 It is also possible to extend a pre-defined alphabet, e.g.
-\code{"{DNA},XY,YX"}.}
+\code{"{DNA},XY"}.}
 
 \item{form}{(character string) How the checksum is presented.
 If \code{"long"} (default), the full-length checksum is outputted.
@@ -149,8 +151,10 @@ identifiers for proteome studies. Proteomics.
 \item Josefsson, S., The Base16, Base32, and Base64 Data Encodings,
 RFC 4648, \doi{10.17487/RFC4648}, October 2006,
 \url{https://www.rfc-editor.org/info/rfc4648}.
-\item Wikpedia article 'Nucleic acid notation', December 2023.
+\item Wikpedia article 'Nucleic acid notation', February 2024.
 \url{https://en.wikipedia.org/wiki/Nucleic_acid_notation}.
+\item Wikpedia article 'Nucleic acid notation', February 2024,
+\url{https://en.wikipedia.org/wiki/Amino_acid}.
 \item Wikipedia article 'SHA-1' (Secure Hash Algorithm 1), December 2023.
 \url{https://en.wikipedia.org/wiki/SHA-1}.
 }

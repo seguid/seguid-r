@@ -89,17 +89,20 @@ with_prefix <- function(s, prefix, form = c("long", "short", "both")) {
 #'
 #' @param alphabet (character string) The type of sequence used.
 #' If `"{DNA}"` (default), then the input is a DNA sequence.
-#' If `"{IUPAC}"`, then the input is a DNA sequence specified with
-#' IUPAC ambiguous DNA symbols (3).
 #' If `"{RNA}"`, then the input is an RNA sequence.
 #' If `"{protein}"`, then the input is an amino-acid sequence.
+#' If `"{DNA-extended}"` or `"{RNA-extended}"`, then the input is a
+#' DNA or RNA sequence specified an extended set of symbols, including
+#  IUPAC symbols (3).
+#' If `"{protein-extended}"`, then the input is an amino-acid sequence
+#' with an extended set of symbols, including IUPAC symbols (4).
 #' A custom alphabet may also be used.
 #' A non-complementary alphabet is specified as a comma-separated
 #' set of single symbols, e.g. `"X,Y,Z"`.
 #' A complementary alphabet is specified as a comma-separated
-#' set of paired symbols, e.g. `"AT,TA,CG,GC"`.
+#' set of paired symbols, e.g. `"AT,CG"`.
 #' It is also possible to extend a pre-defined alphabet, e.g.
-#' `"{DNA},XY,YX"`.
+#' `"{DNA},XY"`.
 #'
 #' @param form (character string) How the checksum is presented.
 #' If `"long"` (default), the full-length checksum is outputted.
@@ -138,7 +141,7 @@ with_prefix <- function(s, prefix, form = c("long", "short", "both")) {
 #' as a file or directory name, because it may have a forward slash.
 #'
 #' The checksum returned is always 27-character long. This is because the
-#" SHA-1 hash (4) is 160-bit long (20 bytes), which result in the encoded
+#" SHA-1 hash (5) is 160-bit long (20 bytes), which result in the encoded
 #' representation always end with a padding character (`=`) so that the 
 #' length is a multiple of four character. We relax this requirement, by
 #' dropping the padding character.
@@ -152,9 +155,11 @@ with_prefix <- function(s, prefix, form = c("long", "short", "both")) {
 #' 2. Josefsson, S., The Base16, Base32, and Base64 Data Encodings,
 #'    RFC 4648, \doi{10.17487/RFC4648}, October 2006,
 #'    <https://www.rfc-editor.org/info/rfc4648>.
-#' 3. Wikpedia article 'Nucleic acid notation', December 2023.
+#' 3. Wikpedia article 'Nucleic acid notation', February 2024.
 #'    <https://en.wikipedia.org/wiki/Nucleic_acid_notation>.
-#' 4. Wikipedia article 'SHA-1' (Secure Hash Algorithm 1), December 2023.
+#' 4. Wikpedia article 'Nucleic acid notation', February 2024,
+#'    <https://en.wikipedia.org/wiki/Amino_acid>.
+#' 5. Wikipedia article 'SHA-1' (Secure Hash Algorithm 1), December 2023.
 #'    <https://en.wikipedia.org/wiki/SHA-1>.
 #'
 #' @importFrom base64enc base64encode
