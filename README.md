@@ -10,28 +10,55 @@ This R package, **seguid**, implements SEGUID v2 together with the
 original SEGUID algorithm.
 
 
-## Example
+## Examples
+
+### Single-stranded DNA
 
 ```r
 > library(seguid)
 
-> lsseguid("AT")
-[1] "lsseguid=Ax_RG6hzSrMEEWoCO1IWMGska-4"
+## Linear single-stranded DNA
+> lsseguid("TATGCCAA")
+[1] "lsseguid=EevrucUNYjqlsxrTEK8JJxPYllk"
 
-> lsseguid("AT")
-[1] "lsseguid=Ax_RG6hzSrMEEWoCO1IWMGska-4"
+## Linear single-stranded DNA
+> lsseguid("AATATGCC")
+[1] "lsseguid=XsJzXMxgv7sbpqIzFH9dgrHUpWw"
 
-> csseguid("AT")
-[1] "csseguid=Ax_RG6hzSrMEEWoCO1IWMGska-4"
+## Circular single-stranded DNA
+> csseguid("TATGCCAA")
+[1] "csseguid=XsJzXMxgv7sbpqIzFH9dgrHUpWw"
 
-> csseguid("TA")
-[1] "csseguid=Ax_RG6hzSrMEEWoCO1IWMGska-4"
+## Same rotating two basepairs
+> csseguid("GCCAATAT")
+[1] "csseguid=XsJzXMxgv7sbpqIzFH9dgrHUpWw"
+```
 
-> cdseguid("AT", "AT")
-[1] "cdseguid=AWD-dt5-TEua8RbOWfnctJIu9nA"
 
-> cdseguid("TA", "TA")
-[1] "cdseguid=AWD-dt5-TEua8RbOWfnctJIu9nA"
+### Double-stranded DNA
+
+```r
+> library(seguid)
+
+## Linear double-stranded DNA
+> ldseguid("AATATGCC", "GGCATATT")
+[1] "cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"
+
+## Same swapping Watson and Crick 
+> ldseguid("GGCATATT", "AATATGCC")
+[1] "cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"
+
+## Circular double-stranded DNA
+> cdseguid("TATGCCAA", "TTGGCATA")
+[1] "cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"
+
+## Same swapping Watson and Crick 
+> cdseguid("TTGGCATA", "TATGCCAA")
+[1] "cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"
+
+## Same rotating two basepairs (= minimal rotation by Watson)
+> cdseguid("AATATGCC", "GGCATATT")
+[1] "cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"
 ```
 
 
