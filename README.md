@@ -1,4 +1,4 @@
-[![seguid status badge](https://seguid.r-universe.dev/badges/seguid)](https://seguid.r-universe.dev/seguid)
+[![CRAN check status](https://CRAN.R-project.org/web/checks/check_results_seguid.html)](https://www.r-pkg.org/badges/version/seguid)
 [![R checks](https://github.com/seguid/seguid-r/actions/workflows/check-r.yml/badge.svg)](https://github.com/seguid/seguid-r/actions/workflows/check-r.yml)
 [![CLI checks](https://github.com/seguid/seguid-r/actions/workflows/check-cli.yml/badge.svg)](https://github.com/seguid/seguid-r/actions/workflows/check-cli.yml)
 [![Test coverage](https://codecov.io/gh/seguid/seguid-r/branch/main/graph/badge.svg)](https://app.codecov.io/gh/seguid/seguid-r)
@@ -59,4 +59,15 @@ original SEGUID algorithm.
 ## Same rotating two basepairs (= minimal rotation by Watson)
 > cdseguid("AATATGCC", "GGCATATT")
 [1] "cdseguid=dUxN7YQyVInv3oDcvz8ByupL44A"
+```
+
+
+## Installation
+
+The **seguid** package is available on
+[CRAN](https://cran.r-project.org/package=seguid) and can be installed
+as:
+
+```r
+install.packages("seguid")
 ```
