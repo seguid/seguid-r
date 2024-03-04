@@ -1,5 +1,5 @@
 Package: seguid
-Version: 0.1.0
+Version: 0.1.0-9001
 Title: Sequence Globally Unique Identifier (SEGUID) Checksums
 Authors@R: c(
     person("Henrik", "Bengtsson",

@@ -1,6 +1,14 @@
 # CRAN submission seguid 0.1.0
 
-on 2024-01-28
+on 2024-03-01
+
+Tweaks in package title and description:
+
+* shorten title to < 65 characters
+* Drop 'An R'
+* 'SEGUID' -> SEGUID
+
+on 2024-02-28
 
 This is new-package submission. Incoming CRAN checks report on:
 
