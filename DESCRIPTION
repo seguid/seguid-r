@@ -6,7 +6,7 @@ Authors@R: c(
            role=c("aut", "cre", "cph"),
            email = "henrikb@braju.com"
     ))
-Description: Implementation of the original Sequence Globally Unique Identifier (SEGUID) algorithm [Babnigg and Giometti (2006) <doi:10.1002/pmic.200600032>] and SEGUID v2 (<https://www.seguid.org>), which extends SEGUID v1 with support for linear, circular, single- and double-stranded biological sequences, e.g. DNA, RNA, and proteins.
+Description: Implementation of the original Sequence Globally Unique Identifier (SEGUID) algorithm [Babnigg and Giometti (2006) <doi:10.1002/pmic.200600032>] and SEGUID v2 (Pereira et al. (2024) <doi:10.1101/2024.02.28.582384>), which extends SEGUID v1 with support for linear, circular, single- and double-stranded biological sequences, e.g. DNA, RNA, and proteins.
 Imports:
     base64enc,
     digest
