@@ -1,5 +1,5 @@
 cli_help_string <- "
-{{ package }}: {{ title }}
+{{ package }}: Sequence Globally Unique Identifier Checksums for Linear, Circular, Single- and Double-Stranded Biological Sequences
 
 Usage:
  Rscript -e seguid::seguid [options] <<< '<sequence>'
