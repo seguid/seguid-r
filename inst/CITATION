@@ -2,6 +2,30 @@ utils::bibentry(
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   # BibTeX entry:
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  bibtype   = "article",
+  title     = "{SEGUID v2}: Extending {SEGUID} checksums for circular, linear, single- and double-stranded biological sequences",
+  author    = "Humberto Pereira and Paulo C{\'e}sar Silva and Wayne M Davis and Louis Abraham and Gyorgy Babnigg and Henrik Bengtsson and Bjorn Johansson",
+  year      = "2024",
+  publisher = "Cold Spring Harbor Laboratory",
+  journal   = "bioRxiv",
+  doi       = "10.1101/2024.02.28.582384",
+  
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  # Plain-text citation:
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  textVersion = paste(
+    "Pereira, Humberto, Paulo César Silva, Wayne M Davis, Louis Abraham, Gyorgy Babnigg, Henrik Bengtsson, and Bjorn Johansson.",
+    "SEGUID v2: Extending SEGUID Checksums for Circular, Linear, Single- and Double-Stranded Biological Sequences.",
+    "bioRxiv (2024).",
+    "https://doi.org/10.1101/2024.02.28.582384"
+  )
+)
+
+
+utils::bibentry(
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+  # BibTeX entry:
+  # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   bibtype = "article",
   title   = "A database of unique protein sequence identifiers for proteome studies",
   author  = "Gy{\"o}rgy Babnigg and Carol S. Giometti",
@@ -20,7 +44,7 @@ utils::bibentry(
   # Plain-text citation:
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   textVersion = paste(
-    "Babnigg, György, and Carol S Giometti,",
+    "Babnigg, György, and Carol S Giometti.",
     "A database of unique protein sequence identifiers for proteome studies.",
     "Proteomics (2006) 6 (16): 4514–22.",
     "https://doi.org/10.1002/pmic.200600032"
