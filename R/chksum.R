@@ -98,7 +98,7 @@ with_prefix <- function(s, prefix, form = c("long", "short", "both")) {
 #' If `"{protein}"`, then the input is an amino-acid sequence.
 #' If `"{DNA-extended}"` or `"{RNA-extended}"`, then the input is a
 #' DNA or RNA sequence specified an extended set of symbols, including
-#  IUPAC symbols (4).
+#' IUPAC symbols (4).
 #' If `"{protein-extended}"`, then the input is an amino-acid sequence
 #' with an extended set of symbols, including IUPAC symbols (5).
 #' A custom alphabet may also be used.
@@ -146,29 +146,28 @@ with_prefix <- function(s, prefix, form = c("long", "short", "both")) {
 #' as a file or directory name, because it may have a forward slash.
 #'
 #' The checksum returned is always 27-character long. This is because the
-#" SHA-1 hash (6) is 160-bit long (20 bytes), which result in the encoded
-#' representation always end with a padding character (`=`) so that the 
-#' length is a multiple of four character. We relax this requirement, by
-#' dropping the padding character.
+#' SHA-1 hash (6) is 160-bit long (20 bytes), which result in the
+#' encoded representation always end with a padding character (`=`) so that
+#' the length is a multiple of four character. We relax this requirement,
+#' by dropping the padding character.
 #'
 #' @example incl/seguid.R
 #'
 #' @references
 #' 1. G Babnigg & CS Giometti, A database of unique protein sequence
 #'    identifiers for proteome studies. Proteomics.
-#'    2006 Aug;6(16):4514-22. \doi{10.1002/pmic.200600032}.
+#'    2006 Aug;6(16):4514-22, \doi{10.1002/pmic.200600032}.
 #' 2. H Pereira, PC Silva, WM Davis, L Abraham, G Babnigg, H Bengtsson &
 #'    B Johansson, SEGUID v2: Extending SEGUID Checksums for Circular,
 #'    Linear, Single- and Double-Stranded Biological Sequences,
-#'    bioRxiv. \doi{10.1101/2024.02.28.582384}.
+#'    bioRxiv, \doi{10.1101/2024.02.28.582384}.
 #' 3. S Josefsson, The Base16, Base32, and Base64 Data Encodings,
-#'    RFC 4648, \doi{10.17487/RFC4648}, October 2006,
-#'    <https://www.rfc-editor.org/info/rfc4648>.
-#' 4. Wikpedia article 'Nucleic acid notation', February 2024.
+#'    RFC 4648, October 2006, \doi{10.17487/RFC4648}.
+#' 4. Wikipedia article 'Nucleic acid notation', February 2024,
 #'    <https://en.wikipedia.org/wiki/Nucleic_acid_notation>.
-#' 5. Wikpedia article 'Amino acids', February 2024,
+#' 5. Wikipedia article 'Amino acids', February 2024,
 #'    <https://en.wikipedia.org/wiki/Amino_acid>.
-#' 6. Wikipedia article 'SHA-1' (Secure Hash Algorithm 1), December 2023.
+#' 6. Wikipedia article 'SHA-1' (Secure Hash Algorithm 1), December 2023,
 #'    <https://en.wikipedia.org/wiki/SHA-1>.
 #'
 #' @importFrom base64enc base64encode

@@ -29,6 +29,7 @@ If \code{"{RNA}"}, then the input is an RNA sequence.
 If \code{"{protein}"}, then the input is an amino-acid sequence.
 If \code{"{DNA-extended}"} or \code{"{RNA-extended}"}, then the input is a
 DNA or RNA sequence specified an extended set of symbols, including
+IUPAC symbols (4).
 If \code{"{protein-extended}"}, then the input is an amino-acid sequence
 with an extended set of symbols, including IUPAC symbols (5).
 A custom alphabet may also be used.
@@ -98,9 +99,10 @@ For the same reason, a Base64 checksum cannot safely be used
 as a file or directory name, because it may have a forward slash.
 
 The checksum returned is always 27-character long. This is because the
-representation always end with a padding character (\code{=}) so that the
-length is a multiple of four character. We relax this requirement, by
-dropping the padding character.
+SHA-1 hash (6) is 160-bit long (20 bytes), which result in the
+encoded representation always end with a padding character (\code{=}) so that
+the length is a multiple of four character. We relax this requirement,
+by dropping the padding character.
 }
 
 \examples{
@@ -150,19 +152,18 @@ ldseguid("AmT2C", "GhA1T", alphabet = viner_DNA)
 \enumerate{
 \item G Babnigg & CS Giometti, A database of unique protein sequence
 identifiers for proteome studies. Proteomics.
-2006 Aug;6(16):4514-22. \doi{10.1002/pmic.200600032}.
+2006 Aug;6(16):4514-22, \doi{10.1002/pmic.200600032}.
 \item H Pereira, PC Silva, WM Davis, L Abraham, G Babnigg, H Bengtsson &
 B Johansson, SEGUID v2: Extending SEGUID Checksums for Circular,
 Linear, Single- and Double-Stranded Biological Sequences,
-bioRxiv. \doi{10.1101/2024.02.28.582384}.
+bioRxiv, \doi{10.1101/2024.02.28.582384}.
 \item S Josefsson, The Base16, Base32, and Base64 Data Encodings,
-RFC 4648, \doi{10.17487/RFC4648}, October 2006,
-\url{https://www.rfc-editor.org/info/rfc4648}.
-\item Wikpedia article 'Nucleic acid notation', February 2024.
+RFC 4648, October 2006, \doi{10.17487/RFC4648}.
+\item Wikipedia article 'Nucleic acid notation', February 2024,
 \url{https://en.wikipedia.org/wiki/Nucleic_acid_notation}.
-\item Wikpedia article 'Amino acids', February 2024,
+\item Wikipedia article 'Amino acids', February 2024,
 \url{https://en.wikipedia.org/wiki/Amino_acid}.
-\item Wikipedia article 'SHA-1' (Secure Hash Algorithm 1), December 2023.
+\item Wikipedia article 'SHA-1' (Secure Hash Algorithm 1), December 2023,
 \url{https://en.wikipedia.org/wiki/SHA-1}.
 }
 }
