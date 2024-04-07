@@ -98,9 +98,9 @@ with_prefix <- function(s, prefix, form = c("long", "short", "both")) {
 #' If `"{protein}"`, then the input is an amino-acid sequence.
 #' If `"{DNA-extended}"` or `"{RNA-extended}"`, then the input is a
 #' DNA or RNA sequence specified an extended set of symbols, including
-#  IUPAC symbols (3).
+#  IUPAC symbols (4).
 #' If `"{protein-extended}"`, then the input is an amino-acid sequence
-#' with an extended set of symbols, including IUPAC symbols (4).
+#' with an extended set of symbols, including IUPAC symbols (5).
 #' A custom alphabet may also be used.
 #' A non-complementary alphabet is specified as a comma-separated
 #' set of single symbols, e.g. `"X,Y,Z"`.
@@ -146,7 +146,7 @@ with_prefix <- function(s, prefix, form = c("long", "short", "both")) {
 #' as a file or directory name, because it may have a forward slash.
 #'
 #' The checksum returned is always 27-character long. This is because the
-#" SHA-1 hash (5) is 160-bit long (20 bytes), which result in the encoded
+#" SHA-1 hash (6) is 160-bit long (20 bytes), which result in the encoded
 #' representation always end with a padding character (`=`) so that the 
 #' length is a multiple of four character. We relax this requirement, by
 #' dropping the padding character.
@@ -166,7 +166,7 @@ with_prefix <- function(s, prefix, form = c("long", "short", "both")) {
 #'    <https://www.rfc-editor.org/info/rfc4648>.
 #' 4. Wikpedia article 'Nucleic acid notation', February 2024.
 #'    <https://en.wikipedia.org/wiki/Nucleic_acid_notation>.
-#' 5. Wikpedia article 'Nucleic acid notation', February 2024,
+#' 5. Wikpedia article 'Amino acids', February 2024,
 #'    <https://en.wikipedia.org/wiki/Amino_acid>.
 #' 6. Wikipedia article 'SHA-1' (Secure Hash Algorithm 1), December 2023.
 #'    <https://en.wikipedia.org/wiki/SHA-1>.

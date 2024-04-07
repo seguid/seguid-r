@@ -30,7 +30,7 @@ If \code{"{protein}"}, then the input is an amino-acid sequence.
 If \code{"{DNA-extended}"} or \code{"{RNA-extended}"}, then the input is a
 DNA or RNA sequence specified an extended set of symbols, including
 If \code{"{protein-extended}"}, then the input is an amino-acid sequence
-with an extended set of symbols, including IUPAC symbols (4).
+with an extended set of symbols, including IUPAC symbols (5).
 A custom alphabet may also be used.
 A non-complementary alphabet is specified as a comma-separated
 set of single symbols, e.g. \code{"X,Y,Z"}.
@@ -160,7 +160,7 @@ RFC 4648, \doi{10.17487/RFC4648}, October 2006,
 \url{https://www.rfc-editor.org/info/rfc4648}.
 \item Wikpedia article 'Nucleic acid notation', February 2024.
 \url{https://en.wikipedia.org/wiki/Nucleic_acid_notation}.
-\item Wikpedia article 'Nucleic acid notation', February 2024,
+\item Wikpedia article 'Amino acids', February 2024,
 \url{https://en.wikipedia.org/wiki/Amino_acid}.
 \item Wikipedia article 'SHA-1' (Secure Hash Algorithm 1), December 2023.
 \url{https://en.wikipedia.org/wiki/SHA-1}.
