@@ -83,6 +83,11 @@ with_prefix <- function(s, prefix, form = c("long", "short", "both")) {
 
 #' SEGUID checksums for linear, circular, single- and double-stranded sequences
 #'
+#' Functions for calculating sequence checksums for linear, circular,
+#' single- and double-stranded sequences based on either the original
+#' SEGUID (SEGUID v1) algorithm (Babnigg & Giometti, 2006) or the
+#' SEGUID v2 algorithm (Pereira et al., 2024).
+#'
 #' @param seq (character string) The sequence for which the checksum
 #' should be calculated.  The sequence may only comprise of symbols
 #' in the alphabet specified by the `alphabet` argument.
@@ -149,17 +154,21 @@ with_prefix <- function(s, prefix, form = c("long", "short", "both")) {
 #' @example incl/seguid.R
 #'
 #' @references
-#' 1. Babnigg, G., Giometti, CS. A database of unique protein sequence
+#' 1. G Babnigg & CS Giometti, A database of unique protein sequence
 #'    identifiers for proteome studies. Proteomics.
 #'    2006 Aug;6(16):4514-22. \doi{10.1002/pmic.200600032}.
-#' 2. Josefsson, S., The Base16, Base32, and Base64 Data Encodings,
+#' 2. H Pereira, PC Silva, WM Davis, L Abraham, G Babnigg, H Bengtsson &
+#'    B Johansson, SEGUID v2: Extending SEGUID Checksums for Circular,
+#'    Linear, Single- and Double-Stranded Biological Sequences,
+#'    bioRxiv. \doi{10.1101/2024.02.28.582384}.
+#' 3. S Josefsson, The Base16, Base32, and Base64 Data Encodings,
 #'    RFC 4648, \doi{10.17487/RFC4648}, October 2006,
 #'    <https://www.rfc-editor.org/info/rfc4648>.
-#' 3. Wikpedia article 'Nucleic acid notation', February 2024.
+#' 4. Wikpedia article 'Nucleic acid notation', February 2024.
 #'    <https://en.wikipedia.org/wiki/Nucleic_acid_notation>.
-#' 4. Wikpedia article 'Nucleic acid notation', February 2024,
+#' 5. Wikpedia article 'Nucleic acid notation', February 2024,
 #'    <https://en.wikipedia.org/wiki/Amino_acid>.
-#' 5. Wikipedia article 'SHA-1' (Secure Hash Algorithm 1), December 2023.
+#' 6. Wikipedia article 'SHA-1' (Secure Hash Algorithm 1), December 2023.
 #'    <https://en.wikipedia.org/wiki/SHA-1>.
 #'
 #' @importFrom base64enc base64encode

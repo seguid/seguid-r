@@ -77,7 +77,10 @@ double-stranded sequence.
 double-stranded sequence.
 }
 \description{
-SEGUID checksums for linear, circular, single- and double-stranded sequences
+Functions for calculating sequence checksums for linear, circular,
+single- and double-stranded sequences based on either the original
+SEGUID (SEGUID v1) algorithm (Babnigg & Giometti, 2006) or the
+SEGUID v2 algorithm (Pereira et al., 2024).
 }
 \section{Base64 and Base64url encodings}{
 
@@ -145,10 +148,14 @@ ldseguid("AmT2C", "GhA1T", alphabet = viner_DNA)
 }
 \references{
 \enumerate{
-\item Babnigg, G., Giometti, CS. A database of unique protein sequence
+\item G Babnigg & CS Giometti, A database of unique protein sequence
 identifiers for proteome studies. Proteomics.
 2006 Aug;6(16):4514-22. \doi{10.1002/pmic.200600032}.
-\item Josefsson, S., The Base16, Base32, and Base64 Data Encodings,
+\item H Pereira, PC Silva, WM Davis, L Abraham, G Babnigg, H Bengtsson &
+B Johansson, SEGUID v2: Extending SEGUID Checksums for Circular,
+Linear, Single- and Double-Stranded Biological Sequences,
+bioRxiv. \doi{10.1101/2024.02.28.582384}.
+\item S Josefsson, The Base16, Base32, and Base64 Data Encodings,
 RFC 4648, \doi{10.17487/RFC4648}, October 2006,
 \url{https://www.rfc-editor.org/info/rfc4648}.
 \item Wikpedia article 'Nucleic acid notation', February 2024.
