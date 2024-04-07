@@ -85,6 +85,7 @@ If <code>"{RNA}"</code>, then the input is an RNA sequence.
 If <code>"{protein}"</code>, then the input is an amino-acid sequence.
 If <code>"{DNA-extended}"</code> or <code>"{RNA-extended}"</code>, then the input is a
 DNA or RNA sequence specified an extended set of symbols, including
+IUPAC symbols (4).
 If <code>"{protein-extended}"</code>, then the input is an amino-acid sequence
 with an extended set of symbols, including IUPAC symbols (5).
 A custom alphabet may also be used.
@@ -161,31 +162,31 @@ are characters that carry special meaning in a URL.
 For the same reason, a Base64 checksum cannot safely be used
 as a file or directory name, because it may have a forward slash.</p>
 <p>The checksum returned is always 27-character long. This is because the
-representation always end with a padding character (<code>=</code>) so that the
-length is a multiple of four character. We relax this requirement, by
-dropping the padding character.</p>
+SHA-1 hash (6) is 160-bit long (20 bytes), which result in the
+encoded representation always end with a padding character (<code>=</code>) so that
+the length is a multiple of four character. We relax this requirement,
+by dropping the padding character.</p>
     </div>
     <div id="references">
     <h2>References</h2>
     
 <ol><li><p>G Babnigg &amp; CS Giometti, A database of unique protein sequence
 identifiers for proteome studies. Proteomics.
-2006 Aug;6(16):4514-22. <a href="https://doi.org/10.1002/pmic.200600032" class="external-link">doi:10.1002/pmic.200600032</a>
+2006 Aug;6(16):4514-22, <a href="https://doi.org/10.1002/pmic.200600032" class="external-link">doi:10.1002/pmic.200600032</a>
 .</p></li>
 <li><p>H Pereira, PC Silva, WM Davis, L Abraham, G Babnigg, H Bengtsson &amp;
 B Johansson, SEGUID v2: Extending SEGUID Checksums for Circular,
 Linear, Single- and Double-Stranded Biological Sequences,
-bioRxiv. <a href="https://doi.org/10.1101/2024.02.28.582384" class="external-link">doi:10.1101/2024.02.28.582384</a>
+bioRxiv, <a href="https://doi.org/10.1101/2024.02.28.582384" class="external-link">doi:10.1101/2024.02.28.582384</a>
 .</p></li>
 <li><p>S Josefsson, The Base16, Base32, and Base64 Data Encodings,
-RFC 4648, <a href="https://doi.org/10.17487/RFC4648" class="external-link">doi:10.17487/RFC4648</a>
-, October 2006,
-<a href="https://www.rfc-editor.org/info/rfc4648" class="external-link">https://www.rfc-editor.org/info/rfc4648</a>.</p></li>
-<li><p>Wikpedia article 'Nucleic acid notation', February 2024.
+RFC 4648, October 2006, <a href="https://doi.org/10.17487/RFC4648" class="external-link">doi:10.17487/RFC4648</a>
+.</p></li>
+<li><p>Wikipedia article 'Nucleic acid notation', February 2024,
 <a href="https://en.wikipedia.org/wiki/Nucleic_acid_notation" class="external-link">https://en.wikipedia.org/wiki/Nucleic_acid_notation</a>.</p></li>
-<li><p>Wikpedia article 'Amino acids', February 2024,
+<li><p>Wikipedia article 'Amino acids', February 2024,
 <a href="https://en.wikipedia.org/wiki/Amino_acid" class="external-link">https://en.wikipedia.org/wiki/Amino_acid</a>.</p></li>
-<li><p>Wikipedia article 'SHA-1' (Secure Hash Algorithm 1), December 2023.
+<li><p>Wikipedia article 'SHA-1' (Secure Hash Algorithm 1), December 2023,
 <a href="https://en.wikipedia.org/wiki/SHA-1" class="external-link">https://en.wikipedia.org/wiki/SHA-1</a>.</p></li>
 </ol></div>
 
