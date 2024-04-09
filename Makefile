@@ -73,4 +73,7 @@ seguid-tests: .PHONY
 check-cli: seguid-tests
 	$(MAKE) -C "$<" check-cli/seguid-r
 
+check-api: seguid-tests
+	$(MAKE) -C "$<" check-api/seguid-r
+
 .PHONY:

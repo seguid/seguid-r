@@ -1,6 +1,6 @@
 on: [push, pull_request]
 
-name: CLI-check
+name: seguid-tests
 
 jobs:
   CLI-check:
@@ -55,6 +55,9 @@ jobs:
       - name: Check CLI
         if: runner.os != 'Windows'
         run: make check-cli
+
+      - name: Check API
+        run: make check-api
 
       - name: Upload check results
         if: failure()
