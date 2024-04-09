@@ -1,6 +1,6 @@
 [![CRAN check status](https://www.r-pkg.org/badges/version/seguid)](https://CRAN.R-project.org/web/checks/check_results_seguid.html)
 [![R checks](https://github.com/seguid/seguid-r/actions/workflows/check-r.yml/badge.svg)](https://github.com/seguid/seguid-r/actions/workflows/check-r.yml)
-[![seguid-tests](https://github.com/seguid/seguid-r/actions/workflows/seguid-tess.yml/badge.svg)](https://github.com/seguid/seguid-r/actions/workflows/seguid-tests.yml)
+[![seguid-tests](https://github.com/seguid/seguid-r/actions/workflows/seguid-tests.yml/badge.svg)](https://github.com/seguid/seguid-r/actions/workflows/seguid-tests.yml)
 [![Test coverage](https://codecov.io/gh/seguid/seguid-r/branch/main/graph/badge.svg)](https://app.codecov.io/gh/seguid/seguid-r)
 
 
