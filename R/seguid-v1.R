@@ -68,6 +68,20 @@
 #' the length is a multiple of four character. We relax this requirement,
 #' by dropping the padding character.
 #'
+#' @section Our SEGUID v1 is conservative:
+#' The differences between our SEGUID v1 implementation in `seguid()` and
+#' the original SEGUID method are:
+#'
+#' 1. `seguid()` does _not_ coerce the input sequence to all upper case;
+#'    it is kept as-is. If your input sequence has lower-case symbols,
+#'    you can use `toupper(seq)` to emulate what the original method does.
+#'
+#' 2. `seguid()` does _not_ accept any input sequence; it only accepts
+#'    symbols as specified by the `alphabet` argument.
+#'
+#' Thus, our implementation is more conservative, which has the benefit of
+#' lowering the risk of passing the incorrect sequence by mistake.
+#'
 #' @example incl/seguid.R
 #'
 #' @references
