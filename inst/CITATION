@@ -5,19 +5,22 @@ utils::bibentry(
   bibtype   = "article",
   title     = "{SEGUID v2}: Extending {SEGUID} checksums for circular, linear, single- and double-stranded biological sequences",
   author    = "Humberto Pereira and Paulo C{\'e}sar Silva and Wayne M Davis and Louis Abraham and Gyorgy Babnigg and Henrik Bengtsson and Bjorn Johansson",
-  year      = "2024",
-  publisher = "Cold Spring Harbor Laboratory",
-  journal   = "bioRxiv",
-  doi       = "10.1101/2024.02.28.582384",
-  
+  year      = "2026",
+  month     = "08",
+  volume    = "21",
+  pages     = "1-16",
+  publisher = "Public Library of Science",
+  journal   = "PLOS ONE",
+  doi       = "10.1371/journal.pone.0346164",
+
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   # Plain-text citation:
   # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
   textVersion = paste(
     "Pereira, Humberto, Paulo César Silva, Wayne M Davis, Louis Abraham, Gyorgy Babnigg, Henrik Bengtsson, and Bjorn Johansson.",
     "SEGUID v2: Extending SEGUID Checksums for Circular, Linear, Single- and Double-Stranded Biological Sequences.",
-    "bioRxiv (2024).",
-    "https://doi.org/10.1101/2024.02.28.582384"
+    "PLOS ONE (2026). PLOS ONE 21(8): e0346164",
+    "https://doi.org/10.1371/journal.pone.0346164"
   )
 )
 

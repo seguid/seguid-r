@@ -1,5 +1,5 @@
 Package: seguid
-Version: 0.1.0-9005
+Version: 0.1.0-9006
 Title: Sequence Globally Unique Identifier (SEGUID) Checksums
 Authors@R: c(
     person("Henrik", "Bengtsson",
@@ -14,5 +14,5 @@ License: MIT + file LICENSE
 URL: https://www.seguid.org/
 BugReports: https://github.com/seguid/seguid-r/issues
 Encoding: UTF-8
-RoxygenNote: 7.3.1
 Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.1.0

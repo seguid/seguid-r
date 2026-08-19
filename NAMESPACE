@@ -9,8 +9,10 @@ export(seguid)
 import(digest)
 importFrom(base64enc,base64encode)
 importFrom(digest,digest)
-importFrom(utils,capture.output)
-importFrom(utils,file_test)
-importFrom(utils,packageDescription)
-importFrom(utils,packageVersion)
-importFrom(utils,str)
+importFrom(utils,
+  capture.output,
+  file_test,
+  packageDescription,
+  packageVersion,
+  str
+)
