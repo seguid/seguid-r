@@ -5,3 +5,4 @@ incl/OVERVIEW.md
 .local
 docs
 tests/test_helper/
+.osgrep
